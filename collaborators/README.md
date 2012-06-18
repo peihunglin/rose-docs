@@ -45,9 +45,26 @@ The dashboard is a work in progress [https://hudson-rose-30:8443/](https://hudso
 
   You can add the following line to your `~/.bashrc` (sourced for a non-interactive shell):
 
-  > ```bash
-    source /nfs/apps/git/latest/setup.sh
-    ```
+   ```bash
+   source /nfs/apps/git/latest/setup.sh
+   ```
+    
+* Once you clone your own local repository, you can push it to your remoate machines, e.g. 
+  laptop at home or machines at your university, and sync your work inside and outside of LLNL. 
+  **Be sure to keep your local repository name ending with "rose".**  Otherwise, you will
+  not have have the signature to download EDG binary.  
+  
+  Check your signature by executing `$ ROSE_SOURCE_TREE/scripts/bincompat-sig`.  Rename your 
+  repository if you see the following error message:  
+  ```bash
+  Unable to find a remote tracking a canonical repository.  Please add a
+  canonical repository as a remote and ensure it is up to date.  Currently
+  configured remotes are:
+    origin => https://github.com/$USER/ROSE-dev.git
+  Potential canonical repositories include:
+   anything ending with "rose.git" (case insensitive)
+  ```
+  
 
 ## 3. Installing `ROSE`
 
