@@ -46,6 +46,7 @@ bash: git-upload-pack: command not found
 fatal: The remote end hung up unexpectedly
 ```
 
+<<<<<<< HEAD
 **Solution: `git-upload-pack: command not found`**
 
 **Internal users** can add the following line to their `~/.bashrc` (sourced for a non-interactive shell):
@@ -85,6 +86,28 @@ download an EDG binary with a miscomputed binary compatibility signature.
 
 To check your ROSE-EDG binary compatibility signature, simply run
 `$ROSE/scripts/bincompat-sig` from the top-level source directory.
+=======
+   ```bash
+   source /nfs/apps/git/latest/setup.sh
+   ```
+    
+* Once you clone your own local repository, you can push it to your remoate machines, e.g. 
+  laptop at home or machines at your university, and sync your work inside and outside of LLNL. 
+  **Be sure to keep your local repository name ending with "rose".**  Otherwise, you will
+  not have have the signature to download EDG binary.  
+  
+  Check your signature by executing `$ ROSE_SOURCE_TREE/scripts/bincompat-sig`.  Rename your 
+  repository if you see the following error message:  
+  ```bash
+  Unable to find a remote tracking a canonical repository.  Please add a
+  canonical repository as a remote and ensure it is up to date.  Currently
+  configured remotes are:
+    origin => https://github.com/$USER/ROSE-dev.git
+  Potential canonical repositories include:
+   anything ending with "rose.git" (case insensitive)
+  ```
+  
+>>>>>>> 6ad851c21fe3d971cad6df5a66d24d6f448a649f
 
 ## 3. Installing `ROSE`
 
